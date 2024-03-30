@@ -1,10 +1,11 @@
 :root {
-    --accent: rgb(105, 162, 228);
+    --main: rgb(41, 134, 239);
+    --accent: rgb(52, 115, 242);
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -12,7 +13,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Black.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -20,7 +21,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-ExtraBold.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-ExtraBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -28,7 +29,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Medium.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -36,7 +37,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-ExtraLight.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -44,7 +45,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -52,7 +53,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Light.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -60,7 +61,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-SemiBold.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -68,7 +69,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Thin.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -99,23 +100,33 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    height: 7vh;
+    height: 10vh;
     width: 100%;
     align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
     padding-left: 1vw;
     padding-right: 1vw;
+}
+
+#title {
+    width: 10vw;
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title h2 {
+    font-weight: 500;
+    font-size: 1.5vw;
 }
 
 #header-center {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    width: 35%;
+    margin-left: 5vw;
+    width: 30%;
 }
 
 #header-center a {
@@ -130,14 +141,20 @@ header {
     color: var(--accent);
 }
 
+#link-login {
+    font-size: 0.9vw;
+    margin-left: 35vw;
+}
+
 #button-signUp {
-    background-color: rgb(61, 142, 235);
-    height: 60%;
+    background-color: var(--main);
+    height: 50%;
     width: 7%;
     margin-left: 2%;
     border-radius: 0.4vw;
     border: none;
     color: white;
+    font-size: 0.9vw;
     transition: 0.25s ease;
 }
 
@@ -156,50 +173,62 @@ header {
 }
 
 #cover-left {
-    height: 50vh;
-    margin-top: 25vh;
+    margin-top: 16vh;
     margin-left: 5vw;
     width: 40%;
     text-align: left;
     user-select: none;
+    display: flex;
+    flex-direction: column;
 }
 
 #cover-left h1 {
-    font-size: 3vw;
-    margin-top: auto;
+    font-size: 4.3vw;
     text-align: left;
-    font-weight: 1000;;
+    font-weight: 590;
+    margin-bottom: auto;
 }
 
-#cover-left h3 {
-    margin-bottom: 5vh;
+#cover-left p {
     font-size: 1.4vw;
     font-weight: 300;
     color: gray;
     margin-right: 30vw;
     text-align: left;
+    width: 100%;
+    height: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 #cover-left button {
-    margin-bottom: 20vh;
-    border: 1px solid black;
-    background-color: transparent;
+    margin-bottom: 40vh;
+    background-color: var(--main);
+    color: white;
+    border: none;
     font-family: "Inter", sans-serif;
     width: 20%;
-    height: 7%;
+    min-height: 7%;
+    font-size: 0.9vw;
     border-radius: 1vh;
 }
 
 #cover-left button:hover {
-    border: 1px solid rgb(105, 162, 228);
-    color: rgb(105, 162, 228);
+    background-color: var(--accent);
+    box-shadow: 0 0 4px var(--accent);
 }
 
 #cover img {
     width: 40%;
-    height: 65%;
-    margin-top: 10%;
+    margin-top: 2%;
     margin-left: 13%;
+    transition: 0.5s ease;
+}
+
+#cover img:hover {
+    width: 42%;
+    margin-top: 1%;
+    margin-left: 12%;
 }
 
 h1 {
@@ -210,9 +239,10 @@ h1 {
 h3 {
     font-size: 1.4vw;
     font-weight: 300;
-    color: gray;
+    color: rgb(67, 67, 67);
     width: 100%;
     text-align: center;
+    word-spacing: 10%;
 }
 
 button {
@@ -224,10 +254,10 @@ button:hover {
 }
 
 #cards {
-    margin-top: 2%;
+    margin-top: 9vh;
+    height: 50vh;
     display: flex;
     flex-direction: row;
-    height: 40vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -235,9 +265,227 @@ button:hover {
 
 .card {
     height: 100%;
-    width: 15%;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-icon {
+    width: 4vw;
+    height: 4vw;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.7vw;
+    position: absolute;
+    margin-bottom: 10vh;
+    z-index: 999;
+}
+
+.card-inner {
+    height: 35vh;
+    width: 25vw;
+    background-color: rgba(0, 0, 0, 0.02);
     border-radius: 3vh;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
+    display: flex;
+    margin-top: 3vh;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card-inner h2 {
+    font-weight: 500;
+    font-size: 1.5vw;
+    margin-top: 8vh;
+    margin-bottom: auto;
+}
+
+.card-inner h3 {
+    font-size: 1.2vw;
+    color: gray;
+    width: 80%;
+    height: 28%;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.card-inner a {
+    text-decoration: none;
+    color: var(--main);
+    margin-bottom: 3vh;
+    font-size: 1.1vw;
+}
+
+#cover2 {
+    width: 100%;
+    height: 100vh;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#cover2-left {
+    width: 45vw;
+    margin-left: 5vw;
+}
+
+#cover2-left h1 {
+    text-align: left;
+}
+
+#cover2-left-caption {
+    text-align: left;
+    font-size: 1.3vw;
+}
+
+#cover2-left-points {
+    padding-left: 2vw;
+}
+
+#cover2-left-points h3 {
+    text-align: left;
+    font-size: 1.2vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+#cover2-img {
+    width: 45%;
+    transition: 0.5s ease;
+}
+
+#cover2-img:hover {
+    width: 46%;
+}
+
+#cover3 {
+    display: flex;
+    flex-direction: row;
+}
+
+#cover3-img {
+    margin: 1% 1% 1% 1%;
+    width: 45%;
+    transition: 0.5s ease;
+}
+
+#cover3-img:hover {
+    width: 46%;
+    margin: 0.5% 0.5% 0.5% 0.5%;
+}
+
+#cover3-right {
+    width: 45%;
+    margin-left: 12.5vw;
+    transition: 0.5s ease;
+}
+
+#cover3-right h1 {
+    text-align: left;
+}
+
+#cover3-right-caption {
+    text-align: left;
+    font-size: 1.3vw;
+}
+
+#cover3-right-points {
+    padding-left: 2vw;
+}
+
+#cover3-right-points h3 {
+    text-align: left;
+    font-size: 1.2vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+#end {
+    height: 60vh;
+    margin-top: 30vh;
+    text-align: center;
+}
+
+#button-signUp2 {
+    background-color: var(--main);
+    height: 9%;
+    width: 7%;
+    border-radius: 0.4vw;
+    border: none;
+    color: white;
+    font-size: 0.9vw;
+    transition: 0.25s ease;
+}
+
+#button-signUp2:hover {
+    background-color: var(--accent);
+    box-shadow: 0 0 4px var(--accent);
+}
+
+.footer {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-main {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+
+.footer-left {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-top: 2vh;
+}
+
+.footer-left h3 {
+    color: gray;
+    font-size: 1vw;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 5vh;
+}
+
+.footer-column {
+    width: 13vw;
+    padding-left: 2vw;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    margin-top: 3vh;
+    font-size: 1.1vw;
+    color: gray;
+}
+
+.footer-column h3 {
+    text-align: left;
+    font-size: 1.1vw;
+    color: rgb(23, 23, 23);
+    font-weight: 500;
+}
+
+.footer-end {
+    width: 90%;
+    border-top: 1px solid rgb(216, 216, 216);
+}
+
+.footer-end h4 {
+    color: gray;
+    font-size: 1vw;
+    font-weight: 200;
 }
